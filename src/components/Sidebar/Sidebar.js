@@ -10,11 +10,21 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import DownloadIcon from '@mui/icons-material/Download';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { connect, useDispatch, useSelector } from "react-redux";
 
 import './Sidebar.css'
 
 
-export default () => {
+const Sidebar = (props) => {
+    console.log(props)
+    if (!props.showSidebar){
+        return (
+            <div>
+
+            </div>
+        )
+    }
+
     return (
         <div className="sidebar">
             <SidebarItem selected Icon={HomeIcon} title="Главная" />
@@ -32,3 +42,9 @@ export default () => {
         </div>
     )
 }
+
+const mapStateToProps = state => ({
+    showSidebar: state.sidebar.showSidebar
+})
+
+export default connect(mapStateToProps) (Sidebar)

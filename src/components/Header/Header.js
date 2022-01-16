@@ -7,15 +7,24 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import { Avatar } from "@mui/material";
+import { connect, useDispatch, useSelector } from "react-redux";
+import { actions } from "../../redux/reducers/sidebar";
+import { bindActionCreators } from 'redux'
 
-export default () => {
+const Header = (props) => {
     const [inputSearch, setInputSearch] = useState('');
     
+    const showSidebarValue = useSelector(state => state.sidebar.showSidebar)
+    
+    const dispatch = useDispatch()
+
     return (
         <div className="header">
             
                 <div className="header__left">
-                <MenuIcon />
+                <MenuIcon 
+                    onClick = {() => dispatch(showSidebarValue ? actions.hideSidebar() : actions.showSidebar())}
+                />
                 <Link to="/">
                     <img
                         className="header__logo"
@@ -47,3 +56,11 @@ export default () => {
         </div>
     )
 }
+
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(actions, dispatch)
+})
+
+const mapStateToProps = null
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
