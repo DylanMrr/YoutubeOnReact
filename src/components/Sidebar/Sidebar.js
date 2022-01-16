@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SidebarItem from "../SidebarItem/SidebarItem";
+import SidebarItemShort from "../SidebarItemShort/SidebarItemShort";
 import HomeIcon from '@mui/icons-material/Home'
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
@@ -16,11 +17,21 @@ import './Sidebar.css'
 
 
 const Sidebar = (props) => {
-    console.log(props)
     if (!props.showSidebar){
         return (
-            <div>
-
+            <div className="sidebarShort">
+                <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
+                <SidebarItemShort Icon={WhatshotIcon} title="Тренды" />
+                <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
+                <hr />
+                <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" />
+                <SidebarItemShort Icon={HistoryIcon} title="История" />
+                <SidebarItemShort Icon={OndemandVideoIcon} title="Ваши видео" />
+                <SidebarItemShort Icon={WatchLaterIcon} title="Смотреть позже" />
+                <SidebarItemShort Icon={DownloadIcon} title="Скачанные" />
+                <SidebarItemShort Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
+                <SidebarItemShort Icon={ExpandMoreIcon} title="Развернуть" />
+                <hr />
             </div>
         )
     }

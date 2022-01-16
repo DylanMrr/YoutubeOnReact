@@ -9,3 +9,15 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.sidebarShort{
+    flex: 0.035;
+}
+
+.sidebarShort > h2{
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
