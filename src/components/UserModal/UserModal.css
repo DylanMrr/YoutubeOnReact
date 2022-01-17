@@ -1,0 +1,41 @@
+.userModal{
+    
+    border: 1px solid lightgrey;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.userModal__avatar{
+    align-items: center;
+    display: flex;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.userModal__avatar__h4{
+    font-size: 14px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.userModal__avatar__icon{
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.userModal__avatar__link{
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.userModal > hr{
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+}

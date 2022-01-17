@@ -5,13 +5,16 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AppsIcon from '@mui/icons-material/Apps';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
-import './Header.css';
 import { Avatar } from "@mui/material";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/reducers/sidebar";
 import { bindActionCreators } from 'redux'
 
+import UserModal from '../UserModal/UserModal'
+
 import { useNavigate } from 'react-router-dom';
+
+import './Header.css';
 
 const Header = (props) => {
     const [inputSearch, setInputSearch] = useState('');
@@ -62,6 +65,7 @@ const Header = (props) => {
                 <Avatar 
                     src="https://avatars.githubusercontent.com/u/46375815?s=400&u=759528978e9b3dcee06cb85cef13960451653177&v=4"
                 />
+                <UserModal />
             </div>
         </div>
     )

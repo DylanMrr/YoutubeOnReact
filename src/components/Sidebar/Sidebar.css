@@ -7,12 +7,10 @@
     position: sticky;
 }
 
-.sidebar > h2{
+.sidebar__wrapper > hr{
     height: 1px;
     border: 0;
     background-color: lightgray;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .sidebarShort{

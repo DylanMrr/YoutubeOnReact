@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import SidebarItem from "../SidebarItem/SidebarItem";
-import SidebarItemShort from "../SidebarItemShort/SidebarItemShort";
+import SidebarItem from "./SidebarItem/SidebarItem";
+import SidebarItemShort from "./SidebarItemShort/SidebarItemShort";
 import HomeIcon from '@mui/icons-material/Home'
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
