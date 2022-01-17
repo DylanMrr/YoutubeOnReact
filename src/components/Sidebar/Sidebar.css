@@ -3,6 +3,8 @@
 }
 
 .sidebar__wrapper{
+    top:80px;
+    position: sticky;
 }
 
 .sidebar > h2{
