@@ -11,12 +11,21 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/reducers/sidebar";
 import { bindActionCreators } from 'redux'
 
+import { useNavigate } from 'react-router-dom';
+
 const Header = (props) => {
     const [inputSearch, setInputSearch] = useState('');
     
     const showSidebarValue = useSelector(state => state.sidebar.showSidebar)
     
     const dispatch = useDispatch()
+    const navigate = useNavigate();
+
+    const onKeyPress = (event) => {
+        if (event.key === 'Enter'){
+            navigate(`/search/${inputSearch}`)
+        }
+    }
 
     return (
         <div className="header">
@@ -38,6 +47,7 @@ const Header = (props) => {
                     placeholder="Введите запрос"
                     type="text"
                     onChange={(e) => setInputSearch(e.target.value)}
+                    onKeyPress={onKeyPress}
                     value={inputSearch}
                 />
                 <Link to={`/search/${inputSearch}`}>
