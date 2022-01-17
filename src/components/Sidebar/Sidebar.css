@@ -1,5 +1,9 @@
 .sidebar{
-    flex: 0.15;
+    flex: 0.15;   
+}
+
+.sidebar__wrapper{
+    position: fixed;
 }
 
 .sidebar > h2{
@@ -11,7 +15,7 @@
 }
 
 .sidebarShort{
-    flex: 0.035;
+    flex: 0.051;
 }
 
 .sidebarShort > h2{

@@ -20,36 +20,38 @@ const Sidebar = (props) => {
     if (!props.showSidebar){
         return (
             <div className="sidebarShort">
-                <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
-                <SidebarItemShort Icon={WhatshotIcon} title="Тренды" />
-                <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
-                <hr />
-                <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" />
-                <SidebarItemShort Icon={HistoryIcon} title="История" />
-                <SidebarItemShort Icon={OndemandVideoIcon} title="Ваши видео" />
-                <SidebarItemShort Icon={WatchLaterIcon} title="Смотреть позже" />
-                <SidebarItemShort Icon={DownloadIcon} title="Скачанные" />
-                <SidebarItemShort Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
-                <SidebarItemShort Icon={ExpandMoreIcon} title="Развернуть" />
-                <hr />
+                <div className="sidebar__wrapper">
+                    <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
+                    <SidebarItemShort Icon={WhatshotIcon} title="Тренды" />
+                    <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
+                    <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" />
+                    <SidebarItemShort Icon={HistoryIcon} title="История" />
+                    <SidebarItemShort Icon={OndemandVideoIcon} title="Ваши видео" />
+                    <SidebarItemShort Icon={WatchLaterIcon} title="Смотреть позже" />
+                    <SidebarItemShort Icon={DownloadIcon} title="Скачанные" />
+                    <SidebarItemShort Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
+                    <SidebarItemShort Icon={ExpandMoreIcon} title="Развернуть" />
+                </div>
             </div>
         )
     }
 
     return (
         <div className="sidebar">
-            <SidebarItem selected Icon={HomeIcon} title="Главная" />
-            <SidebarItem Icon={WhatshotIcon} title="Тренды" />
-            <SidebarItem Icon={SubscriptionsIcon} title="Подписки" />
-            <hr />
-            <SidebarItem Icon={VideoLibraryIcon} title="Библиотека" />
-            <SidebarItem Icon={HistoryIcon} title="История" />
-            <SidebarItem Icon={OndemandVideoIcon} title="Ваши видео" />
-            <SidebarItem Icon={WatchLaterIcon} title="Смотреть позже" />
-            <SidebarItem Icon={DownloadIcon} title="Скачанные" />
-            <SidebarItem Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
-            <SidebarItem Icon={ExpandMoreIcon} title="Развернуть" />
-            <hr />
+            <div className="sidebar__wrapper">
+                <SidebarItem selected Icon={HomeIcon} title="Главная" />
+                <SidebarItem Icon={WhatshotIcon} title="Тренды" />
+                <SidebarItem Icon={SubscriptionsIcon} title="Подписки" />
+                <hr />
+                <SidebarItem Icon={VideoLibraryIcon} title="Библиотека" />
+                <SidebarItem Icon={HistoryIcon} title="История" />
+                <SidebarItem Icon={OndemandVideoIcon} title="Ваши видео" />
+                <SidebarItem Icon={WatchLaterIcon} title="Смотреть позже" />
+                <SidebarItem Icon={DownloadIcon} title="Скачанные" />
+                <SidebarItem Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
+                <SidebarItem Icon={ExpandMoreIcon} title="Развернуть" />
+                <hr />
+            </div>
         </div>
     )
 }
