@@ -1,5 +1,4 @@
 .sidebarItemShort{
-    /*display: flex;*/
     align-items: center;
     padding-left: 0px;
     position: relative;
@@ -11,6 +10,7 @@
     margin-right: auto;
     display: flex;
     padding-top: 3px;
+    padding-left: 23px;
 }
 
 .sidebarItemShort__title{
