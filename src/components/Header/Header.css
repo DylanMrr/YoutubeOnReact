@@ -8,6 +8,10 @@
     z-index: 100;
     background-color: white;
   }
+
+  .header__left:hover{
+    cursor: pointer;
+  }
   
   .header__logo {
     height: 25px;

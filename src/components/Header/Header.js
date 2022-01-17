@@ -21,7 +21,7 @@ const Header = (props) => {
     return (
         <div className="header">
             
-                <div className="header__left">
+            <div className="header__left">
                 <MenuIcon 
                     onClick = {() => dispatch(showSidebarValue ? actions.hideSidebar() : actions.showSidebar())}
                 />
