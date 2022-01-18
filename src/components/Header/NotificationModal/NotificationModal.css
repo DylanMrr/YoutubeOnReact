@@ -1,0 +1,24 @@
+.notificationModal{
+    position: absolute;
+    border: 1px solid lightgrey;
+    background-color: white;
+    right: 96px;
+    top: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificationModal__header{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notificationModal__header__text{
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.notificationModal__header__icon{
+    margin-right: 10px;
+}

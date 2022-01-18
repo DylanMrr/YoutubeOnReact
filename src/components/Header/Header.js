@@ -11,6 +11,7 @@ import { actions } from "../../redux/reducers/sidebar";
 import { bindActionCreators } from 'redux'
 
 import UserModal from './UserModal/UserModal'
+import NotificationModal from "./NotificationModal/NotificationModal";
 
 import { useNavigate } from 'react-router-dom';
 
@@ -77,6 +78,7 @@ const Header = (props) => {
                         onClose={() => setUserModal(false)}
                     />
                 )}
+                <NotificationModal />
             </div>
         </div>
     )
