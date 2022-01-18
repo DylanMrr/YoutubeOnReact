@@ -23,26 +23,14 @@
     margin-top: 6px;
 }
 
-.sidebarItemShort:hover > .sidebarItemShort__title{
-    color: red;
-}
-
-.sidebarItemShort:hover > .sidebarItemShort__title{
-    font-weight: bold;
-}
-
-.sidebarItemShort:hover{
+.sidebarItemShort:hover {
     background-color: lightgray;
 }
 
 .sidebarItemShort.selected {
     background-color: lightgray;
 }
-
-.sidebarItemShort.selected > .sidebarItem__icon {
-    color: red;
-}
   
-.sidebarItemShort.selected > .sidebarItem__title {
+.sidebarItemShort.selected > .sidebarItemShort__title {
   font-weight: bold;
 }

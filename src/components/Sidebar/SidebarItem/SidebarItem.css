@@ -17,24 +17,12 @@
     font-weight: 500;
 }
 
-.sidebarItem:hover > .sidebarItem__icon{
-    color: red;
-}
-
-.sidebarItem:hover > .sidebarItem__title{
-    font-weight: bold;
-}
-
 .sidebarItem:hover{
     background-color: lightgray;
 }
 
 .sidebarItem.selected {
     background-color: lightgray;
-}
-
-.sidebarItem.selected > .sidebarItem__icon {
-    color: red;
 }
   
 .sidebarItem.selected > .sidebarItem__title {
