@@ -10,7 +10,7 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/reducers/sidebar";
 import { bindActionCreators } from 'redux'
 
-import UserModal from '../UserModal/UserModal'
+import UserModal from './UserModal/UserModal'
 
 import { useNavigate } from 'react-router-dom';
 
