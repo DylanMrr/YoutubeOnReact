@@ -23,7 +23,6 @@ export default ({userModalButton, onClose}) => {
 
 	useEffect(() => {
 		function handleClickOutside(event) {
-            console.log(userModalButton)
 		    if (userModalRef.current && !userModalRef.current.contains(event.target) && !userModalButton.current.contains(event.target)) {
 				onClose();
 			}

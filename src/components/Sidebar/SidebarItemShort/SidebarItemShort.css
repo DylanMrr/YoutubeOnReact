@@ -2,15 +2,16 @@
     align-items: center;
     padding-left: 0px;
     position: relative;
+    cursor: pointer;
 }
 
 .sidebarItemShort__icon{
     color: #606060;
     margin-left: auto;
     margin-right: auto;
-    display: flex;
     padding-top: 3px;
-    padding-left: 23px;
+    left: 37%;
+    position: relative;
 }
 
 .sidebarItemShort__title{
@@ -25,6 +26,10 @@
 
 .sidebarItemShort:hover > .sidebarItemShort__title{
     font-weight: bold;
+}
+
+.sidebarItemShort:hover{
+    background-color: lightgray;
 }
 
 .sidebarItemShort.selected {
