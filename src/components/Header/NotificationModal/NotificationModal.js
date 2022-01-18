@@ -1,13 +1,32 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 
 import NotificationModalItem from "./NotificationModalItem/NotificationModalItem";
 
 import './NotificationModal.css'
 
-export default () => {
+export default ({notificationModalButton, onClose}) => {
+    
+    const notificationModalRef = useRef(null)
+
+    useEffect(() => {
+		function handleClickOutside(event) {
+		    if (notificationModalRef.current 
+                && !notificationModalRef.current.contains(event.target) 
+                && !notificationModalButton.current.contains(event.target)
+            ) {
+				onClose();
+			}
+		}
+
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [notificationModalRef])
+    
     return (
-        <div className="notificationModal">
+        <div className="notificationModal" ref={notificationModalRef}>
             <div className="notificationModal__header">
                 <div className="notificationModal__header__text">
                     Уведомления
