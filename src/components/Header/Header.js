@@ -16,6 +16,7 @@ import NotificationModal from "./NotificationModal/NotificationModal";
 import { useNavigate } from 'react-router-dom';
 
 import './Header.css';
+import ApplicationModal from "./ApplicationModal/ApplicationModal";
 
 const Header = (props) => {
     const [inputSearch, setInputSearch] = useState('');
@@ -92,6 +93,8 @@ const Header = (props) => {
                         onClose={() => setNotificationModal(false)}
                     />
                 )}
+                <ApplicationModal
+                />
             </div>
         </div>
     )
