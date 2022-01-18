@@ -30,6 +30,7 @@
     font-size: 12px;
     font-weight: 500;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .userModal > hr{
