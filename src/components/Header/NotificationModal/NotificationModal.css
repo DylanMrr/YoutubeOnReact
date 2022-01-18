@@ -2,16 +2,17 @@
     position: absolute;
     border: 1px solid lightgrey;
     background-color: white;
-    right: 96px;
+    right: 90px;
     top: 70px;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
 }
 
 .notificationModal__header{
     margin-top: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .notificationModal__header__text{
@@ -21,4 +22,15 @@
 
 .notificationModal__header__icon{
     margin-right: 10px;
+}
+
+.notificationModal > hr{
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+}
+
+.notificationModal__items{
+    overflow-y: scroll;
+    height: 500px;
 }
