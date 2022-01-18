@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef}  from "react";
 import { Avatar } from "@mui/material";
 import UserModalItem from "./UserModalItem/UserModalItem";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -17,9 +17,26 @@ import KeyboardIcon from '@mui/icons-material/Keyboard';
 
 import './UserModal.css'
 
-export default () => {
+export default ({userModalButton, onClose}) => {
+    
+    const userModalRef = useRef(null);
+
+	useEffect(() => {
+		function handleClickOutside(event) {
+            console.log(userModalButton)
+		    if (userModalRef.current && !userModalRef.current.contains(event.target) && !userModalButton.current.contains(event.target)) {
+				onClose();
+			}
+		}
+
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [userModalRef])
+    
     return(
-        <div className="userModal">
+        <div className="userModal" ref={userModalRef}>
             <div className="userModal__avatar">
                 <Avatar 
                     src="https://avatars.githubusercontent.com/u/46375815?s=400&u=759528978e9b3dcee06cb85cef13960451653177&v=4"

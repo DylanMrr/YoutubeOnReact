@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
@@ -30,9 +30,11 @@ const Header = (props) => {
         }
     }
 
+    const [userModal, setUserModal] = useState(false);
+    const userModalButton = useRef(null);
+
     return (
         <div className="header">
-            
             <div className="header__left">
                 <MenuIcon 
                     onClick = {() => dispatch(showSidebarValue ? actions.hideSidebar() : actions.showSidebar())}
@@ -58,14 +60,23 @@ const Header = (props) => {
                 </Link>
             </div>
 
-            <div className="header__icons">
+            <div className="header__icons" >
                 <VideoCallIcon className="header__icon"/>
                 <AppsIcon className="header__icon"/>
                 <NotificationsIcon className="header__icon"/>
-                <Avatar 
-                    src="https://avatars.githubusercontent.com/u/46375815?s=400&u=759528978e9b3dcee06cb85cef13960451653177&v=4"
-                />
-                <UserModal />
+                <div ref={userModalButton}>
+                    <Avatar 
+                        className="header__icon"
+                        onClick = {() => setUserModal(!userModal)}
+                        src="https://avatars.githubusercontent.com/u/46375815?s=400&u=759528978e9b3dcee06cb85cef13960451653177&v=4"
+                    />
+                </div>
+                { userModal && (
+                    <UserModal 
+                        userModalButton={userModalButton}
+                        onClose={() => setUserModal(false)}
+                    />
+                )}
             </div>
         </div>
     )
