@@ -23,7 +23,3 @@
 .sidebarItem.selected {
     background-color: lightgray;
 }
-  
-.sidebarItem.selected > .sidebarItem__title {
-  font-weight: bold;
-}

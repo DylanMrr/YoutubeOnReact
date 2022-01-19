@@ -30,6 +30,3 @@
     background-color: lightgray;
 }
   
-.sidebarItemShort.selected > .sidebarItemShort__title {
-  font-weight: bold;
-}

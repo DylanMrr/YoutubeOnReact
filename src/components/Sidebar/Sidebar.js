@@ -14,6 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExploreIcon from '@mui/icons-material/ExploreOutlined';
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusicOutlined';
+import { Link } from 'react-router-dom';
 import { connect, useDispatch, useSelector } from "react-redux";
 
 import './Sidebar.css'
@@ -24,7 +25,9 @@ const Sidebar = (props) => {
         return (
             <div className="sidebarShort">
                 <div className="sidebar__wrapper">
-                    <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
+                    <Link to="/" style={{textDecoration: "none"}}>
+                        <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
+                    </Link>
                     <SidebarItemShort Icon={ExploreIcon} title="Навигатор" />
                     <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
                     <SidebarItemShort Icon={YouTubeIcon} title="Originals" />
@@ -39,7 +42,9 @@ const Sidebar = (props) => {
     return (
         <div className="sidebar">
             <div className="sidebar__wrapper">
-                <SidebarItem selected Icon={HomeIcon} title="Главная" />
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <SidebarItem selected Icon={HomeIcon} title="Главная" />
+                </Link>
                 <SidebarItem Icon={ExploreIcon} title="Навигатор" />
                 <SidebarItem Icon={SubscriptionsIcon} title="Подписки" />
                 <SidebarItem Icon={YouTubeIcon} title="Originals" />
