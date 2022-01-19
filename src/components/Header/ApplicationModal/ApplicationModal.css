@@ -1,0 +1,15 @@
+.applicationModal{
+    position: absolute;
+    border: 1px solid lightgrey;
+    background-color: white;
+    right: 130px;
+    top: 70px;
+    align-items: center;
+    justify-content: center;   
+}
+
+.applicationModal > hr{
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+}

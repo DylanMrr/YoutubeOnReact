@@ -1,0 +1,15 @@
+.applicationModalItem {
+    cursor: pointer;
+    display: flex;
+    padding-top: 10px;
+    width: 270px;
+    margin-bottom: 10px;
+}
+
+.applicationModalItem__icon{
+    padding-left: 20px;
+}
+
+.applicationModalItem__text{
+    padding-left: 20px;
+}
