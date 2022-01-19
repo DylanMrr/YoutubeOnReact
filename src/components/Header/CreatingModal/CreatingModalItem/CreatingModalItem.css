@@ -1,0 +1,19 @@
+.creatingModalItem {
+    cursor: pointer;
+    display: flex;
+    padding-top: 10px;
+    width: 220px;
+    margin-bottom: 0px;
+}
+
+.creatingModalItem:hover{
+    background-color: lightgray;
+}
+
+.creatingModalItem__icon{
+    padding-left: 20px;
+}
+
+.creatingModalItem__text{
+    padding-left: 20px;
+}

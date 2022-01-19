@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './Header.css';
 import ApplicationModal from "./ApplicationModal/ApplicationModal";
+import CreatingModal from "./CreatingModal/CreatingModal";
 
 const Header = (props) => {
     const [inputSearch, setInputSearch] = useState('');
@@ -35,10 +36,12 @@ const Header = (props) => {
     const [userModal, setUserModal] = useState(false);
     const [notificationModal, setNotificationModal] = useState(false);
     const [applicationModal, setApplicationModal] = useState(false);
+    const [creatingModal, setCreatingModal] = useState(false);
 
     const userModalButton = useRef(null);
     const notificationModalButton = useRef(null);
     const applicationModalButton = useRef(null);
+    const creatingModalButton = useRef(null);
 
     return (
         <div className="header">
@@ -68,7 +71,12 @@ const Header = (props) => {
             </div>
 
             <div className="header__icons" >
-                <VideoCallIcon className="header__icon"/>
+                <div ref = {creatingModalButton}>
+                    <VideoCallIcon 
+                        className="header__icon"
+                        onClick = {() => setCreatingModal(!creatingModal)}
+                    />
+                </div>
                 <div ref = {applicationModalButton}>
                     <AppsIcon 
                         className="header__icon"
@@ -88,6 +96,7 @@ const Header = (props) => {
                         src="https://avatars.githubusercontent.com/u/46375815?s=400&u=759528978e9b3dcee06cb85cef13960451653177&v=4"
                     />
                 </div>
+
                 { userModal && (
                     <UserModal 
                         userModalButton={userModalButton}
@@ -104,6 +113,12 @@ const Header = (props) => {
                     <ApplicationModal
                         applicationModalButton={applicationModalButton}
                         onClose={() => setApplicationModal(false)}
+                    />
+                )}
+                { creatingModal && (
+                    <CreatingModal 
+                        creatingModalButton = {creatingModalButton}
+                        onClose = {() => setCreatingModal(false)}
                     />
                 )}
             </div>

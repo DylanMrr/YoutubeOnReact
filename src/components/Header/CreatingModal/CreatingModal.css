@@ -1,0 +1,10 @@
+.creatingModal{
+    position: absolute;
+    border: 1px solid lightgrey;
+    background-color: white;
+    right: 176px;
+    top: 70px;
+    align-items: center;
+    justify-content: center;  
+    padding-bottom: 5px;
+}
