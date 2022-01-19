@@ -16,19 +16,32 @@ import YouTubeIcon from '@mui/icons-material/YouTube'
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusicOutlined';
 import { Link } from 'react-router-dom';
 import { connect, useDispatch, useSelector } from "react-redux";
+import { actions } from "../../redux/reducers/sidebar";
+import { bindActionCreators } from 'redux'
 
 import './Sidebar.css'
 
 
 const Sidebar = (props) => {
+
+    const selectedItem = useSelector(state => state.sidebar.selectedItem)
+
+    const dispatch = useDispatch()
+
+    const checkSelectedItem = (checkedName) => {
+        return checkedName == selectedItem
+    }
+
     if (!props.showSidebar){
         return (
             <div className="sidebarShort">
                 <div className="sidebar__wrapper">
                     <Link to="/" style={{textDecoration: "none"}}>
-                        <SidebarItemShort selected Icon={HomeIcon} title="Главная" />
+                        <SidebarItemShort selected={checkSelectedItem("Главная")} Icon={HomeIcon} title="Главная" onclick={() => dispatch(actions.sidebarSelected("Главная"))}/>
                     </Link>
-                    <SidebarItemShort Icon={ExploreIcon} title="Навигатор" />
+                    <Link to="/navigator" style={{textDecoration: "none"}}>
+                        <SidebarItemShort selected={checkSelectedItem("Навигатор")} Icon={ExploreIcon} title="Навигатор" onclick={() => dispatch(actions.sidebarSelected("Навигатор"))}/>
+                    </Link>
                     <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
                     <SidebarItemShort Icon={YouTubeIcon} title="Originals" />
                     <SidebarItemShort Icon={LibraryMusicIcon} title="Youtube Music" />
@@ -43,9 +56,11 @@ const Sidebar = (props) => {
         <div className="sidebar">
             <div className="sidebar__wrapper">
                 <Link to="/" style={{textDecoration: "none"}}>
-                    <SidebarItem selected Icon={HomeIcon} title="Главная" />
+                    <SidebarItem selected={checkSelectedItem("Главная")} Icon={HomeIcon} title="Главная" onclick={() => dispatch(actions.sidebarSelected("Главная"))}/>
                 </Link>
-                <SidebarItem Icon={ExploreIcon} title="Навигатор" />
+                <Link to="/navigator" style={{textDecoration: "none"}}>
+                    <SidebarItem selected={checkSelectedItem("Навигатор")} Icon={ExploreIcon} title="Навигатор" onclick={() => dispatch(actions.sidebarSelected("Навигатор"))}/>
+                </Link>
                 <SidebarItem Icon={SubscriptionsIcon} title="Подписки" />
                 <SidebarItem Icon={YouTubeIcon} title="Originals" />
                 <SidebarItem Icon={LibraryMusicIcon} title="Youtube Music" />
@@ -67,4 +82,8 @@ const mapStateToProps = state => ({
     showSidebar: state.sidebar.showSidebar
 })
 
-export default connect(mapStateToProps) (Sidebar)
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(actions, dispatch)
+})
+
+export default connect(mapStateToProps, mapDispatchToProps) (Sidebar)

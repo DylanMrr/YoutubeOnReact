@@ -23,3 +23,7 @@
 .sidebarItem.selected {
     background-color: lightgray;
 }
+
+a{
+    color: black
+}

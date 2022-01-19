@@ -4,6 +4,7 @@ import  Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SearchPage from './pages/SearchPage/SearchPage';
 import HomePage from './pages/HomePage/HomePage'
+import NavigatorPage from './pages/NavigatorPage/NavigatorPage';
 
 function App() {
   return (
@@ -12,12 +13,9 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/search/:searchItem" element={<SearchPage />}>
-            
-          </Route>
-          <Route path="/" element={<HomePage /> }>
-            
-          </Route>
+          <Route path="/search/:searchItem" element={<SearchPage />} />
+          <Route path="/" element={<HomePage /> } />
+          <Route path="/navigator" element={<NavigatorPage />} />
         </Routes>
       </BrowserRouter>
     </div>
