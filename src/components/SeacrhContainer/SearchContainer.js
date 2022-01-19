@@ -1,14 +1,14 @@
 import React from "react";
 import TuneIcon from '@mui/icons-material/Tune';
 
-import './SearchPage.css'
+import './SearchContainer.css'
 import ChannelRow from "../ChannelRow/ChannelRow";
 import VideoRow from "../VideoRow/VideoRow";
 
 export default () => {
     return(
-        <div className="searchPage">
-            <div className="searchPage__filter">
+        <div className="searchContainer">
+            <div className="searchContainer__filter">
                 <TuneIcon />
                 <h2>Фильтр</h2>
             </div>

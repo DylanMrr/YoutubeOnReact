@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import  Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SearchContainer from './components/SearchContainer/SearchContainer';
-import HomePage from './components/HomePage/HomePage'
+import SearchPage from './pages/SearchPage/SearchPage';
+import HomePage from './pages/HomePage/HomePage'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/search/:searchItem" element={<SearchContainer />}>
+          <Route path="/search/:searchItem" element={<SearchPage />}>
             
           </Route>
           <Route path="/" element={<HomePage /> }>

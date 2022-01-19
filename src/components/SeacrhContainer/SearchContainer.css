@@ -1,10 +1,10 @@
-.searchPage{
+.searchContainer{
     flex: 1;
     background-color: #f9f9f9;
     padding: 20px 20px;
 }
 
-.searchPage__filter{
+.searchContainer__filter{
     display: flex;
     align-items: center;
     color: #606060;
@@ -12,11 +12,11 @@
     font-size: xx-small !important;
 }
 
-.searchPage__filter > h2{
+.searchContainer__filter > h2{
     margin-left: 10px;
 }
 
-.searchPage > hr {
+.searchContainer > hr {
     height: 1px;
     border: 0;
     background-color: lightgrey;

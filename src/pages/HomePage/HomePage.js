@@ -1,5 +1,5 @@
-import Sidebar from "../Sidebar/Sidebar"
-import RecommendedVideos from '../RecommendedVideos/RecommendedVideos'
+import Sidebar from "../../components/Sidebar/Sidebar"
+import RecommendedVideos from '../../components/RecommendedVideos/RecommendedVideos'
 import React from "react"
 
 import './HomePage.css'
