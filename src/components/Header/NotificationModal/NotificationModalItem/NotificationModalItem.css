@@ -8,6 +8,10 @@
     margin-bottom: 10px;
 }
 
+.notificationModalItem:hover{
+    background-color: lightgray;
+}
+
 .notificationModalItem__preview{
     height: 40px;
     width: 90px;

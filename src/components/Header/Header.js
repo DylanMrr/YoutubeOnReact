@@ -34,9 +34,11 @@ const Header = (props) => {
 
     const [userModal, setUserModal] = useState(false);
     const [notificationModal, setNotificationModal] = useState(false);
+    const [applicationModal, setApplicationModal] = useState(false);
 
     const userModalButton = useRef(null);
     const notificationModalButton = useRef(null);
+    const applicationModalButton = useRef(null);
 
     return (
         <div className="header">
@@ -67,7 +69,12 @@ const Header = (props) => {
 
             <div className="header__icons" >
                 <VideoCallIcon className="header__icon"/>
-                <AppsIcon className="header__icon"/>
+                <div ref = {applicationModalButton}>
+                    <AppsIcon 
+                        className="header__icon"
+                        onClick = {() => setApplicationModal(!applicationModal)}
+                    />
+                </div>
                 <div ref = {notificationModalButton}>
                     <NotificationsIcon 
                         className="header__icon"
@@ -93,8 +100,12 @@ const Header = (props) => {
                         onClose={() => setNotificationModal(false)}
                     />
                 )}
-                <ApplicationModal
-                />
+                { applicationModal && (
+                    <ApplicationModal
+                        applicationModalButton={applicationModalButton}
+                        onClose={() => setApplicationModal(false)}
+                    />
+                )}
             </div>
         </div>
     )

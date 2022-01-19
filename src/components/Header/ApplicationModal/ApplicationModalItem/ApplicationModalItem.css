@@ -6,6 +6,10 @@
     margin-bottom: 10px;
 }
 
+.applicationModalItem:hover{
+    background-color: lightgray;
+}
+
 .applicationModalItem__icon{
     padding-left: 20px;
 }
