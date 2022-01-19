@@ -1,8 +1,8 @@
 import React, {useState, useRef} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AppsIcon from '@mui/icons-material/Apps';
+import VideoCallIcon from '@mui/icons-material/VideoCallOutlined';
+import AppsIcon from '@mui/icons-material/AppsOutlined';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Link } from 'react-router-dom';
 import { Avatar } from "@mui/material";

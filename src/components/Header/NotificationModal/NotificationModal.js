@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from "react";
-import SettingsIcon from '@mui/icons-material/Settings';
+import SettingsIcon from '@mui/icons-material/SettingsOutlined';
 
 import NotificationModalItem from "./NotificationModalItem/NotificationModalItem";
 

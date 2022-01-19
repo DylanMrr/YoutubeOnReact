@@ -1,19 +1,19 @@
 import React, {useEffect, useRef}  from "react";
 import { Avatar } from "@mui/material";
 import UserModalItem from "./UserModalItem/UserModalItem";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
-import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
-import LogoutIcon from '@mui/icons-material/Logout';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import TranslateIcon from '@mui/icons-material/Translate';
-import LanguageIcon from '@mui/icons-material/Language';
-import SettingsIcon from '@mui/icons-material/Settings';
-import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibility';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import ReviewsIcon from '@mui/icons-material/Reviews';
-import KeyboardIcon from '@mui/icons-material/Keyboard';
+import AccountCircleIcon from '@mui/icons-material/AccountCircleOutlined';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOnOutlined';
+import ChangeCircleIcon from '@mui/icons-material/ChangeCircleOutlined';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggestOutlined';
+import LogoutIcon from '@mui/icons-material/LogoutOutlined';
+import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
+import TranslateIcon from '@mui/icons-material/TranslateOutlined';
+import LanguageIcon from '@mui/icons-material/LanguageOutlined';
+import SettingsIcon from '@mui/icons-material/SettingsOutlined';
+import SettingsAccessibilityIcon from '@mui/icons-material/SettingsAccessibilityOutlined';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutlineOutlined';
+import ReviewsIcon from '@mui/icons-material/ReviewsOutlined';
+import KeyboardIcon from '@mui/icons-material/KeyboardOutlined';
 
 import './UserModal.css'
 
