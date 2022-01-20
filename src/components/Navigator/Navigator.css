@@ -1,3 +1,25 @@
 .navigator{
+    background-color: #f9f9f9;
+    flex:1;
+}
+
+.navigator__container{
+    padding-top: 25px; 
+    padding-left: 200px;
+    padding-right: 200px;  
+}
+
+.navigator__types{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
     
+}
+
+.navigator__container > h2{
+    font-size: 20px;
+}
+
+.navigator__videos{
+
 }

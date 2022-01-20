@@ -1,0 +1,24 @@
+.navigatorType{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navigatorType__container{
+    padding: 20px;
+}
+
+.navigatorType__icon{
+    margin-bottom: 10px;
+}
+
+.navigatorType__text{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navigatorType:hover{
+    background-color: lightgray;
+}
