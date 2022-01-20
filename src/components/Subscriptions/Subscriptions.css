@@ -1,0 +1,49 @@
+.subscriptions{
+    background-color: #f9f9f9;
+    flex:1;
+}
+
+.subscriptions__container{
+    padding-top: 25px; 
+    padding-left: 200px;
+    padding-right: 200px;  
+}
+
+.subscriptions__header{
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subscriptions__header__left{
+    display: flex;
+}
+
+.subscriptions__header__icon{
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.subscriptions__header__link{
+    cursor: pointer;
+    color: blue
+}
+
+.subscriptions__videos{
+    margin-top: 15px;
+}
+
+.subscriptions__videos__grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subscriptions__videos > hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgrey;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}

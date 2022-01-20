@@ -3,6 +3,7 @@
     margin-bottom: 30px;
     max-width: 70%;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .videoRow > img{

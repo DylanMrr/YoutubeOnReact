@@ -25,7 +25,7 @@ export default () => {
 
                 <h2>Популярные видео</h2>
 
-                <div className="navigator__videos">
+                <div>
                     <VideoRow 
                         views="1.4M просмотров"
                         veryfied

@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SearchPage from './pages/SearchPage/SearchPage';
 import HomePage from './pages/HomePage/HomePage'
 import NavigatorPage from './pages/NavigatorPage/NavigatorPage';
+import SubscriptionsPage from './pages/SubscribersPage/SubscriptionsPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/search/:searchItem" element={<SearchPage />} />
           <Route path="/" element={<HomePage /> } />
           <Route path="/navigator" element={<NavigatorPage />} />
+          <Route path="/subscriptions" element={<SubscriptionsPage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -42,7 +42,9 @@ const Sidebar = (props) => {
                     <Link to="/navigator" style={{textDecoration: "none"}}>
                         <SidebarItemShort selected={checkSelectedItem("Навигатор")} Icon={ExploreIcon} title="Навигатор" onclick={() => dispatch(actions.sidebarSelected("Навигатор"))}/>
                     </Link>
-                    <SidebarItemShort Icon={SubscriptionsIcon} title="Подписки" />
+                    <Link to="/subscriptions" style={{textDecoration: "none"}}>
+                        <SidebarItemShort selected={checkSelectedItem("Подписки")} Icon={SubscriptionsIcon} title="Подписки" onclick={() => dispatch(actions.sidebarSelected("Подписки"))}/>
+                    </Link>
                     <SidebarItemShort Icon={YouTubeIcon} title="Originals" />
                     <SidebarItemShort Icon={LibraryMusicIcon} title="Youtube Music" />
                     <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" />
@@ -61,7 +63,9 @@ const Sidebar = (props) => {
                 <Link to="/navigator" style={{textDecoration: "none"}}>
                     <SidebarItem selected={checkSelectedItem("Навигатор")} Icon={ExploreIcon} title="Навигатор" onclick={() => dispatch(actions.sidebarSelected("Навигатор"))}/>
                 </Link>
-                <SidebarItem Icon={SubscriptionsIcon} title="Подписки" />
+                <Link to="/subscriptions" style={{textDecoration: "none"}}>
+                    <SidebarItem selected={checkSelectedItem("Подписки")} Icon={SubscriptionsIcon} title="Подписки" onclick={() => dispatch(actions.sidebarSelected("Подписки"))}/>
+                </Link>
                 <SidebarItem Icon={YouTubeIcon} title="Originals" />
                 <SidebarItem Icon={LibraryMusicIcon} title="Youtube Music" />
                 <hr />
