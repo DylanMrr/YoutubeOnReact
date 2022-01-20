@@ -45,10 +45,18 @@ const Sidebar = (props) => {
                     <Link to="/subscriptions" style={{textDecoration: "none"}}>
                         <SidebarItemShort selected={checkSelectedItem("Подписки")} Icon={SubscriptionsIcon} title="Подписки" onclick={() => dispatch(actions.sidebarSelected("Подписки"))}/>
                     </Link>
-                    <SidebarItemShort Icon={YouTubeIcon} title="Originals" />
-                    <SidebarItemShort Icon={LibraryMusicIcon} title="Youtube Music" />
-                    <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" />
-                    <SidebarItemShort Icon={DownloadIcon} title="Скачанные" />
+                    <Link to="/originals" style={{textDecoration: "none"}}>
+                        <SidebarItemShort Icon={YouTubeIcon} title="Originals" selected={checkSelectedItem("Originals")} onclick={() => dispatch(actions.sidebarSelected("Originals"))}/>
+                    </Link>
+                    <Link to="/music" style={{textDecoration: "none"}}>
+                        <SidebarItemShort Icon={LibraryMusicIcon} title="Youtube Music" selected={checkSelectedItem("music")} onclick={() => dispatch(actions.sidebarSelected("music"))}/>
+                    </Link>
+                    <Link to="/library" style={{textDecoration: "none"}}>
+                        <SidebarItemShort Icon={VideoLibraryIcon} title="Библиотека" selected={checkSelectedItem("Библиотека")} onclick={() => dispatch(actions.sidebarSelected("Библиотека"))}/>
+                    </Link>
+                    <Link to="/downloaded" style={{textDecoration: "none"}}>
+                        <SidebarItemShort Icon={DownloadIcon} title="Скачанные" selected={checkSelectedItem("Скачанные")} onclick={() => dispatch(actions.sidebarSelected("Скачанные"))}/>
+                    </Link>
                 </div>
             </div>
         )
@@ -66,16 +74,32 @@ const Sidebar = (props) => {
                 <Link to="/subscriptions" style={{textDecoration: "none"}}>
                     <SidebarItem selected={checkSelectedItem("Подписки")} Icon={SubscriptionsIcon} title="Подписки" onclick={() => dispatch(actions.sidebarSelected("Подписки"))}/>
                 </Link>
-                <SidebarItem Icon={YouTubeIcon} title="Originals" />
-                <SidebarItem Icon={LibraryMusicIcon} title="Youtube Music" />
+                <Link to="/originals" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={YouTubeIcon} title="Originals" selected={checkSelectedItem("Originals")} onclick={() => dispatch(actions.sidebarSelected("Originals"))}/>
+                </Link>
+                <Link to="/music" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={LibraryMusicIcon} title="Youtube Music" selected={checkSelectedItem("music")} onclick={() => dispatch(actions.sidebarSelected("music"))}/>
+                </Link>
                 <hr />
-                <SidebarItem Icon={VideoLibraryIcon} title="Библиотека" />
-                <SidebarItem Icon={HistoryIcon} title="История" />
-                <SidebarItem Icon={OndemandVideoIcon} title="Ваши видео" />
-                <SidebarItem Icon={WatchLaterIcon} title="Смотреть позже" />
-                <SidebarItem Icon={DownloadIcon} title="Скачанные" />
-                <SidebarItem Icon={ThumbUpOffAltIcon} title="Понравившиеся" />
-                <SidebarItem Icon={ExpandMoreIcon} title="Развернуть" />
+                <Link to="/library" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={VideoLibraryIcon} title="Библиотека" selected={checkSelectedItem("Библиотека")} onclick={() => dispatch(actions.sidebarSelected("Библиотека"))}/>
+                </Link>
+                <Link to="/history" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={HistoryIcon} title="История" selected={checkSelectedItem("История")} onclick={() => dispatch(actions.sidebarSelected("История"))}/>
+                </Link>
+                <Link to="/your" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={OndemandVideoIcon} title="Ваши видео" selected={checkSelectedItem("Ваши видео")} onclick={() => dispatch(actions.sidebarSelected("Ваши видео"))}/>
+                </Link>
+                <Link to="/watchlater" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={WatchLaterIcon} title="Смотреть позже" selected={checkSelectedItem("Смотреть позже")} onclick={() => dispatch(actions.sidebarSelected("Смотреть позже"))}/>
+                </Link>
+                <Link to="/downloaded" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={DownloadIcon} title="Скачанные" selected={checkSelectedItem("Скачанные")} onclick={() => dispatch(actions.sidebarSelected("Скачанные"))}/>
+                </Link>
+                <Link to="/liked" style={{textDecoration: "none"}}>
+                    <SidebarItem Icon={ThumbUpOffAltIcon} title="Понравившиеся" selected={checkSelectedItem("Понравившиеся")} onclick={() => dispatch(actions.sidebarSelected("Понравившиеся"))}/>
+                </Link>
+                <SidebarItem Icon={ExpandMoreIcon} title="Развернуть" onclick={() => {}}/>
                 <hr />
             </div>
         </div>

@@ -1,0 +1,8 @@
+.notFound{
+    background-color: #f9f9f9;
+    flex:1;
+}
+
+.notFound > img{
+    width: 100%;
+}

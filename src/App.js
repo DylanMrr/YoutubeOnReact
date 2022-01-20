@@ -6,6 +6,7 @@ import SearchPage from './pages/SearchPage/SearchPage';
 import HomePage from './pages/HomePage/HomePage'
 import NavigatorPage from './pages/NavigatorPage/NavigatorPage';
 import SubscriptionsPage from './pages/SubscribersPage/SubscriptionsPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<HomePage /> } />
           <Route path="/navigator" element={<NavigatorPage />} />
           <Route path="/subscriptions" element={<SubscriptionsPage />} />
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>
