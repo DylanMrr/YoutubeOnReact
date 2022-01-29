@@ -11,7 +11,9 @@ import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 function App() {
   return (
     <div className='app'>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      {//<HashRouter basename={process.env.PUBLIC_URL}>
+} 
+      <BrowserRouter basename={window.location.pathname || ''} >
         <Header />
 
         <Routes>
@@ -22,7 +24,7 @@ function App() {
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
